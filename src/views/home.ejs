@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs') %>
+    <title>Home-page</title>
+  </head>
+  <body>
+    <%- include('partials/nav.ejs') %>
+
+    <div
+      class="container justify-content-center align-items-center mt-5"
+      style="height: 100%; width: 100%; text-align: center"
+    >
+      <% if (blogs && blogs.length > 0) { %>
+      <div class="container mt-3 row row-cols-4 gap-3">
+        <% blogs.forEach(blog => { %>
+        <div class="card col" style="width: 18rem">
+          <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <a href="<%= `/blog/${blog._id}` %>" class="btn btn-primary"
+              >View</a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <% } else { %>
+      <h1>Welcome to Blogify</h1>
+      <p>Your go-to platform for sharing and discovering amazing blogs!</p>
+
+      <% if (user) { %>
+      <p>Hello, <%= user.username %>!</p>
+      <% } else { %>
+      <p>Hello, Guest!</p>
+      <% } %>
+      <p>No blogs available.</p>
+      <% } %>
+    </div>
+    <%- include('partials/script.ejs') %>
+  </body>
+</html>

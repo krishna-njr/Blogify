@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs') %>
+    <title>Home-page</title>
+  </head>
+  <body>
+    <%- include('partials/nav.ejs') %>
+
+    <div class="container">
+      <form action="/user/signup" method="POST">
+        <div class="my-3">
+          <label for="username" class="form-label">Full name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="email"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+            required
+          />
+        </div>
+
+        <label for="role" class="form-label">Role</label>
+        <select
+          class="form-select form-select-lg mb-3"
+          id="role"
+          name="role"
+          required
+        >
+          <option value="">Open to select the role</option>
+          <option value="admin">admin</option>
+          <option value="user">user</option>
+        </select>
+
+        <!-- <div class="mb-3">
+          <label for="formFileLg" class="form-label">Upload file</label>
+          <input
+            class="form-control form-control-lg"
+            id="formFileLg"
+            name="file"
+            type="file"
+          />
+        </div> -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!-- <form action="/user/signup" method="POST" enctype="multipart/form-data">
+        <div class="my-3">
+          <label for="username" class="form-label">Full name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            aria-describedby="user-username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="exampleInputPassword1"
+            required
+          />
+        </div>
+        <label for="role" class="form-label">Role</label>
+        <select
+          class="form-select form-select-lg mb-3"
+          aria-label="Large select example"
+          id="role"
+          name="role"
+        >
+          <option selected>Open to select the role</option>
+          <option value="admin">admin</option>
+          <option value="user">user</option>
+        </select>
+
+        <div class="mb-3">
+          <label for="formFileLg" class="form-label"
+            >Large file input example</label
+          >
+          <input
+            class="form-control form-control-lg"
+            id="formFileLg"
+            name="file"
+            type="file"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
+    </div>
+    <%- include('partials/script.ejs') %>
+  </body>
+</html>
