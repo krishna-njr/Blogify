@@ -31,25 +31,27 @@ It allows authenticated users to create, read, and comment on blogs. The project
    cd blogify
    ```
 2. **Install dependencies**
-     ```npm install```
+     ```
+   npm install
+     ```
 
-3. **Set up environment variables**
+4. **Set up environment variables**
   Create a .env file in the root directory and add:
-```
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-SESSION_SECRET=your_secret_key
-```
+   ```
+   PORT=3000
+   MONGO_URI=your_mongodb_connection_string
+   SESSION_SECRET=your_secret_key
+   ```
 
 4. **Run the development server**
-  ```
-npm run dev
-```
+     ```
+   npm run dev
+   ```
 
 6. **Open in browser**
-```
-http://localhost:3000
-```
+   ```
+   http://localhost:3000
+   ```
 
 
 
