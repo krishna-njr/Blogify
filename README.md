@@ -42,10 +42,14 @@ SESSION_SECRET=your_secret_key
 ```
 
 4. **Run the development server**
-  ```npm run dev```
+  ```
+npm run dev
+```
 
 6. **Open in browser**
-```http://localhost:3000```
+```
+http://localhost:3000
+```
 
 
 
